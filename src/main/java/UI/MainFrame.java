@@ -48,13 +48,11 @@ public class MainFrame extends JFrame {
         JTextField textField1 = new JTextField("Adresat:");
         innerGBC.gridx = 0;
         innerGBC.gridy = 0;
-        innerGBC.weightx = 0.5;
         rightPanel.add(textField1, innerGBC);
 
         JTextField textField2 = new JTextField("Temat:");
         innerGBC.gridx = 0;
         innerGBC.gridy = 1;
-        innerGBC.weightx = 0.5;
         rightPanel.add(textField2, innerGBC);
 
         JTextArea textArea = new JTextArea(10, 40);
@@ -62,7 +60,6 @@ public class MainFrame extends JFrame {
         innerGBC.gridx = 0;
         innerGBC.gridy = 2;
         innerGBC.gridwidth = 2;
-        innerGBC.weighty = 0.5;
         innerGBC.fill = GridBagConstraints.BOTH;
         rightPanel.add(scrollPane, innerGBC);
 
