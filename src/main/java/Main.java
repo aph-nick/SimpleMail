@@ -1,12 +1,18 @@
 import MailData.User;
+import UI.MainFrame;
 import org.simplejavamail.api.email.Email;
 import org.simplejavamail.api.mailer.Mailer;
 import org.simplejavamail.email.EmailBuilder;
 import org.simplejavamail.mailer.MailerBuilder;
 
+import java.awt.*;
+import javax.swing.*;
+
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-        User user = new User("", "");
+        /*User user = new User("example@email.com", "test");
 
         Email email = EmailBuilder
                 .startingBlank()
@@ -21,6 +27,11 @@ public class Main {
             mailer.sendMail(email);
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }
+        } */
+
+        SwingUtilities.invokeLater(() -> {
+        new MainFrame();
+
+        });
     }
 }
