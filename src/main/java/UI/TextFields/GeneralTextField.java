@@ -1,15 +1,23 @@
 package UI.TextFields;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class GeneralTextField {
+public class GeneralTextField extends JPanel {
     protected JLabel label;
     protected JTextField field;
 
     public GeneralTextField(String labelText) {
         this.label = new JLabel(labelText);
-        this.field = new JTextField( 20);
+        label.setPreferredSize(new Dimension(100, 30));
+        this.field = new JTextField(20);
         this.field.setEditable(true);
+
+        setLayout(new BorderLayout(5,0));
+        add(label, BorderLayout.WEST);
+        add(field, BorderLayout.CENTER);
+
+        setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
     }
 
     public JLabel getLabel() {

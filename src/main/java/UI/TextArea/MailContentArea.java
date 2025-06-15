@@ -1,4 +1,9 @@
 package UI.TextArea;
 
-public class MailContentArea {
+import javax.swing.*;
+
+public class MailContentArea extends JTextArea {
+    public MailContentArea() {
+
+    }
 }
