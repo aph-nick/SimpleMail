@@ -1,4 +1,9 @@
 package UI.Panels;
 
-public class LeftPanel {
+import javax.swing.*;
+
+public class LeftPanel extends JPanel {
+    public LeftPanel() {
+
+    }
 }

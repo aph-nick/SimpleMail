@@ -17,6 +17,8 @@ public class MainFrame extends JFrame {
         setLayout(new BorderLayout());
 
         add(new TopPanel(), BorderLayout.NORTH);
+        add(new LeftPanel(), BorderLayout.WEST);
+        add(new RightPanel(), BorderLayout.EAST);
 
         setVisible(true);
     }
