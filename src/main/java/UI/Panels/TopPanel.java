@@ -5,13 +5,29 @@ import UI.Buttons.SendMailButton;
 import UI.Clock.ClockDisplay;
 
 import javax.swing.*;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class TopPanel extends JPanel {
     public TopPanel() {
         setLayout(new BorderLayout());
-        add(new AddContactButton(), BorderLayout.WEST);
-        add(new SendMailButton(), BorderLayout.CENTER);
+
+        LineBorder lineBorder = new LineBorder(Color.DARK_GRAY, 1);
+        EmptyBorder paddingBorder = new EmptyBorder(10, 0, 10, 15);
+        CompoundBorder combinedBorder = new CompoundBorder(lineBorder, paddingBorder);
+
+        setBorder(combinedBorder);
+
+        JPanel buttons = new JPanel();
+        buttons.setLayout(new FlowLayout(0, 15, 0));
+        buttons.add(new AddContactButton());
+        buttons.add(new SendMailButton());
+        add(buttons, BorderLayout.WEST);
+
+        JPanel blankPanel = new JPanel();
+        add(blankPanel, BorderLayout.CENTER);
         add(new ClockDisplay(), BorderLayout.EAST);
     }
 }
