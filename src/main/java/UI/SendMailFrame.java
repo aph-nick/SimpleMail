@@ -1,9 +1,6 @@
 package UI;
 
-import MailData.Message;
-import MailData.Contact;
-import MailData.EmailCheck;
-import MailData.MessageManager;
+import MailData.*;
 import UI.Buttons.SendButton;
 import UI.Buttons.CancelButton;
 import UI.Buttons.SelectButton;
@@ -120,6 +117,7 @@ public class SendMailFrame extends JFrame {
 
 
             JOptionPane.showMessageDialog(this, "Mail sent successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            EmailSender.sendRealEmail(newMessage);
             dispose();
         } catch (IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
