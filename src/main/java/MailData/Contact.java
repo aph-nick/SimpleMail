@@ -44,4 +44,16 @@ public class Contact {
     public String toString(){
         return "Contact: " + firstName + " " + lastName + " " + email;
     }
+
+    public String toFileString() {
+        return firstName + "," + lastName + "," + email;
+    }
+
+    public static Contact fromFileString(String line) {
+        String[] parts = line.split(",");
+        if (parts.length == 3) {
+            return new Contact(parts[0], parts[1], parts[2]);
+        }
+        return null;
+    }
 }

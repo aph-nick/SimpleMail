@@ -1,5 +1,6 @@
 package UI.Buttons;
 
+import UI.AddContactFrame;
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,5 +14,11 @@ public class AddContactButton extends JButton {
         setIcon(contactIcon);
         setBackground(Color.WHITE);
         setFont(new Font("Arial", Font.BOLD, 15));
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        addActionListener(e -> {
+            AddContactFrame addContactFrame = new AddContactFrame();
+            addContactFrame.setVisible(true);
+        });
     }
 }

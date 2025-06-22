@@ -6,7 +6,7 @@ import java.awt.*;
 public class CancelButton extends JButton {
     public CancelButton() {
         super("Cancel");
-        setBackground(Color.red);
+        setBackground(Color.white);
         setBorder(new RoundedBorder(20));
     }
 }

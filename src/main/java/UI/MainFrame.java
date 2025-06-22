@@ -1,9 +1,8 @@
 package UI;
 
-import UI.Panels.LeftPanel;
+import UI.Panels.LeftPanel.LeftPanel;
 import UI.Panels.RightPanel;
 import UI.Panels.TopPanel;
-import UI.TextArea.MailContentArea;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,10 +14,14 @@ public class MainFrame extends JFrame {
         setSize(1200, 800);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
+        LeftPanel leftPanel = new LeftPanel();
+        RightPanel rightPanel = new RightPanel();
 
-        add(new TopPanel(), BorderLayout.NORTH);
-        add(new LeftPanel(), BorderLayout.WEST);
-        add(new RightPanel(), BorderLayout.CENTER);
+        leftPanel.setMailSelectionListener(rightPanel);
+
+        add(new TopPanel(leftPanel), BorderLayout.NORTH);
+        add(leftPanel, BorderLayout.WEST);
+        add(rightPanel, BorderLayout.CENTER);
 
         setVisible(true);
     }
