@@ -7,8 +7,8 @@ import org.simplejavamail.mailer.MailerBuilder;
 
 public class EmailSender {
 
-    private static final String SENDER_EMAIL = "twoj_email@gmail.com";
-    private static final String SENDER_PASSWORD = "twoje_haslo_do_aplikacji";
+    private static final String SENDER_EMAIL = "email";
+    private static final String SENDER_PASSWORD = "haslo";
 
     private static final String SMTP_HOST = "smtp.gmail.com";
     private static final int SMTP_PORT = 587;
