@@ -41,7 +41,3 @@ public class EmailSender {
 
 ⚠️ **UWAGA:** Nie commituj pliku `EmailSender.java` z prawdziwymi danymi logowania do repozytorium publicznego!
 
-
----
-
-Ten projekt to dobry punkt startowy do rozwijania bardziej zaawansowanego klienta poczty – można dodać m.in. obsługę skrzynki odbiorczej, załączników czy integrację z zewnętrznymi API.
