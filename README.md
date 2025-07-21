@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/3c88c453-1549-4c40-b45d-0e73a369c3dc)
 # 📬 SimpleMail – Java Mail App with Swing & SimpleJavaMail
 
 SimpleMail to prosta aplikacja desktopowa napisana Javie, która umożliwia wysyłanie e-maili bezpośrednio z poziomu interfejsu graficznego. Powstał jako szkolny projekt programistyczny, a jego celem było połączenie możliwości biblioteki `SimpleJavaMail` z prostym interfejsem graficznym zbudowanym przy użyciu biblioteki `Swing`.
